@@ -2,18 +2,9 @@ import React,{useState} from 'react'
 import styled from 'styled-components'
 
 
-const Role_dice = () => {
-    const[currentdice, setCurrentdice]=useState(1)
-    const getRandomIntInclusive = (min, max) => {
-        const minCeiled = Math.ceil(min);
-        const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-        
-      };
-      const roll_dice=() => { 
-        const random = getRandomIntInclusive(1,6);
-        setCurrentdice((prev)=>random);
-      }
+const Role_dice = ({currentdice, roll_dice}) => {
+   
+    
       
     return (
     <DiceContainer>
